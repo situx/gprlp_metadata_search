@@ -293,8 +293,9 @@ class GeoportalRlpMetadataSearch:
                 dyn_param = ['wfs']
                 provider_name = 'WFS'
                 setting_node = QgsSettingsTree.node('connections').childNode('ows').childNode('connections')
-
-            service_name = 'Result from GeoPortal.rlp search plugin' # % service_type[1]
+            restext=self.dlg.textBrowserResourceAbstract.toPlainText()
+            service_name="["+str(given_service_type).upper()+"] "+str(restext)+" (Geoportal.rlp plugin)"
+            #service_name = 'Result from GeoPortal.rlp search plugin' # % service_type[1]
             conn_name_matches = []
             dyn_param.append(service_name)
             setting_node.childSetting('url').setValue(self.clean_ows_url(data_url), dyn_param)
@@ -1097,7 +1098,7 @@ class GeoportalRlpMetadataSearch:
                 pixmap = QPixmap()
                 pixmap.loadFromData(result_content)
                 # draw preview
-                self.dlg.labelLogo.setPixmap(pixmap.scaled(self.dlg.labelLogo.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+                self.dlg.labelLogo.setPixmap(pixmap.scaled(self.dlg.labelLogo.size(), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
             else:
                 QgsMessageLog.logMessage("An error occured while try to open url: " + request_url, 'GeoPortal.rlp search',
                                          level=Qgis.Critical)
@@ -1105,14 +1106,14 @@ class GeoportalRlpMetadataSearch:
             help_icon_path = os.path.join(os.path.dirname(__file__), "questionmark.png")
             pixmap_help = QPixmap()
             pixmap.load(help_icon_path)
-            self.dlg.labelHelp.setPixmap(pixmap.scaled(self.dlg.labelHelp.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            self.dlg.labelHelp.setPixmap(pixmap.scaled(self.dlg.labelHelp.size(), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
             self.dlg.labelHelp.setText('<a href="https://github.com/mrmap-community/gprlp_metadata_search">' +
                                        self.tr("Help") + '</a>')
             self.dlg.labelHelp.setOpenExternalLinks(True)
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
-        result = self.dlg.exec_()
+        result = self.dlg.exec()
         # See if OK was pressed
         if result:
             # Do something useful here - delete the line containing pass and
@@ -1680,8 +1681,8 @@ class GeoportalRlpMetadataSearch:
         request = QNetworkRequest()
         request.setUrl(QUrl(url))
         if content_type:
-            request.setHeader(QNetworkRequest.ContentTypeHeader, content_type)
-        request.setHeader(QNetworkRequest.UserAgentHeader, "QGIS 3.X - Metadata search")
+            request.setHeader(QNetworkRequest.KnownHeaders.ContentTypeHeader, content_type)
+        request.setHeader(QNetworkRequest.KnownHeaders.UserAgentHeader, "QGIS 3.X - Metadata search")
         # manager = QgsNetworkAccessManager.instance()
         # blockingGet
         # result = manager.blockingGet(request, forceRefresh=True)
@@ -1815,7 +1816,7 @@ class GeoportalRlpMetadataSearch:
         else:
             search_path = "/mapbender/php/mod_callMetadata.php"
         # get string from input field
-        search_text_string = self.dlg.textEditSearchText.toPlainText()
+        search_text_string = self.dlg.textEditSearchText.text()
         if search_text_string == "":
             search_text = "*"
         else:

@@ -6,656 +6,397 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>731</width>
-    <height>670</height>
+    <width>619</width>
+    <height>565</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GeoPortal.rlp Metadata Search</string>
   </property>
-  <widget class="QDialogButtonBox" name="button_box">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>630</y>
-     <width>341</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel</set>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEditSearchText">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>60</y>
-     <width>181</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="documentTitle">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>60</y>
-     <width>88</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Start Search</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelSearchTextTitle">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>81</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>SearchText</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelNoResults">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>140</y>
-     <width>71</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Results</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowserResourceAbstract">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>390</y>
-     <width>381</width>
-     <height>131</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelPreview">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>180</y>
-     <width>81</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Preview</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButtonLoad">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>600</y>
-     <width>141</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Load</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelResourceId">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>160</y>
-     <width>281</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QTreeWidget" name="treeWidgetResourceDetail">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>410</y>
-     <width>261</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <property name="headerHidden">
-    <bool>true</bool>
-   </property>
-   <attribute name="headerVisible">
-    <bool>false</bool>
-   </attribute>
-   <column>
-    <property name="text">
-     <string notr="true">1</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="labelPage">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>170</y>
-     <width>41</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Page</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="numberOfAllResultsLabel">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>140</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="numberOfPageLabel">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>170</y>
-     <width>21</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelFrom">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>170</y>
-     <width>41</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>from</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="numberOfAllPagesLabel">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>170</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButtonPageBack">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>170</y>
-     <width>31</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButtonPageForward">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>170</y>
-     <width>31</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&gt;</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxSearchResources">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>60</y>
-     <width>131</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTreeWidget" name="treeWidgetResource">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>200</y>
-     <width>261</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <attribute name="headerVisible">
-    <bool>false</bool>
-   </attribute>
-   <column>
-    <property name="text">
-     <string notr="true">1</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="labelOwsContextListTitle">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>380</y>
-     <width>231</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Further information</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxSearchCatalogue">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>60</y>
-     <width>171</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLogo">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>171</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Logo</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelResourceTypeTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>140</y>
-     <width>111</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Resource type:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelResourceType">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>140</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelResourceIdTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>160</y>
-     <width>111</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Resource id:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLoadCountTitle">
-   <property name="geometry">
-    <rect>
-     <x>540</x>
-     <y>140</y>
-     <width>81</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Load count:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLoadCount">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>140</y>
-     <width>81</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelExtent">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>220</y>
-     <width>281</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOrgaTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>270</y>
-     <width>91</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Organization:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelDateTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>290</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Last modified:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLicenceTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>310</y>
-     <width>81</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Licence:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelRestrictionsTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>360</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Restrictions:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOrga">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>270</y>
-     <width>271</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelDate">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>290</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLicence">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>310</y>
-     <width>131</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelRestrictions">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>360</y>
-     <width>71</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelAccessUrlTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>530</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Access url:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelAccessUrl">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>530</y>
-     <width>181</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelMetadataTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>550</y>
-     <width>101</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Metadata:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelMetadata">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>550</y>
-     <width>181</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelExtentTitle">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>200</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Extent:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxRemoteCsw">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>100</y>
-     <width>321</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelSearchAnimation">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>20</y>
-     <width>171</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOnlineUsageTitle">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>570</y>
-     <width>111</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Online Usage:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOnlineUsage">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>570</y>
-     <width>181</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Unknown</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLicenceLogo">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>310</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelLicenceOpen">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>340</y>
-     <width>131</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelHelp">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>20</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="6">
+    <widget class="QLabel" name="labelResourceIdTitle">
+     <property name="text">
+      <string>Resource id:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="9">
+    <widget class="QLabel" name="labelLicenceOpen">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="7" colspan="2">
+    <widget class="QComboBox" name="comboBoxSearchResources"/>
+   </item>
+   <item row="15" column="6">
+    <widget class="QLabel" name="labelOnlineUsageTitle">
+     <property name="text">
+      <string>Online Usage:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="7">
+    <widget class="QLabel" name="labelLicence">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="numberOfPageLabel">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7">
+    <widget class="QLabel" name="labelResourceType">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="6">
+    <widget class="QLabel" name="labelOwsContextListTitle">
+     <property name="text">
+      <string>Further information</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="4">
+    <widget class="QLineEdit" name="textEditSearchText"/>
+   </item>
+   <item row="2" column="9">
+    <widget class="QComboBox" name="comboBoxSearchCatalogue"/>
+   </item>
+   <item row="2" column="6">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Start Search</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6" colspan="2">
+    <widget class="QLabel" name="labelHelp">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="7" colspan="3">
+    <widget class="QLabel" name="labelAccessUrl">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelPage">
+     <property name="text">
+      <string>Page</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="6">
+    <widget class="QPushButton" name="pushButtonLoad">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Load</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QLabel" name="numberOfAllPagesLabel">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="9">
+    <widget class="QLabel" name="labelLoadCount">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="6">
+    <widget class="QLabel" name="labelRestrictionsTitle">
+     <property name="text">
+      <string>Restrictions:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="8">
+    <widget class="QLabel" name="labelLoadCountTitle">
+     <property name="text">
+      <string>Load count:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="8">
+    <widget class="QLabel" name="labelLicenceLogo">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLabel" name="labelNoResults">
+     <property name="text">
+      <string>Results</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="7" colspan="3">
+    <widget class="QLabel" name="labelMetadata">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="6">
+    <widget class="QLabel" name="labelDateTitle">
+     <property name="text">
+      <string>Last modified:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="3">
+    <widget class="QLabel" name="numberOfAllResultsLabel">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="7" colspan="3">
+    <widget class="QLabel" name="labelRestrictions">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <widget class="QLabel" name="labelSearchAnimation">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="6">
+    <widget class="QLabel" name="labelAccessUrlTitle">
+     <property name="text">
+      <string>Access url:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="6">
+    <widget class="QLabel" name="labelLogo">
+     <property name="text">
+      <string>Logo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QLabel" name="labelResourceTypeTitle">
+     <property name="text">
+      <string>Resource type:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="7">
+    <widget class="QLabel" name="labelDate">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="pushButtonPageBack">
+     <property name="text">
+      <string>&lt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" rowspan="5" colspan="6">
+    <widget class="QTreeWidget" name="treeWidgetResourceDetail">
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="indentation">
+      <number>5</number>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="headerHidden">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="headerStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QPushButton" name="pushButtonPageForward">
+     <property name="text">
+      <string>&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="9">
+    <widget class="QDialogButtonBox" name="button_box">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="7" colspan="3">
+    <widget class="QComboBox" name="comboBoxRemoteCsw">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="7" colspan="3">
+    <widget class="QLabel" name="labelOnlineUsage">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="7">
+    <widget class="QLabel" name="labelOrga">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7">
+    <widget class="QLabel" name="labelResourceId">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="6">
+    <widget class="QLabel" name="labelOrgaTitle">
+     <property name="text">
+      <string>Organization:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="6">
+    <widget class="QLabel" name="labelLicenceTitle">
+     <property name="text">
+      <string>Licence:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="6">
+    <widget class="QLabel" name="labelMetadataTitle">
+     <property name="text">
+      <string>Metadata:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="labelSearchTextTitle">
+     <property name="text">
+      <string>SearchText</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="6" colspan="4">
+    <widget class="QTextBrowser" name="textBrowserResourceAbstract">
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="labelFrom">
+     <property name="text">
+      <string>from</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="7" colspan="3">
+    <widget class="QLabel" name="labelPreview">
+     <property name="text">
+      <string>Preview</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QLabel" name="labelExtentTitle">
+     <property name="text">
+      <string>Extent:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="7">
+    <widget class="QLabel" name="labelExtent">
+     <property name="text">
+      <string>Unknown</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" rowspan="5" colspan="6">
+    <widget class="QTreeWidget" name="treeWidgetResource">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="indentation">
+      <number>5</number>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="headerStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>
